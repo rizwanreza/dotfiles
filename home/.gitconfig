@@ -1,0 +1,59 @@
+[user]
+	name = Rizwan Reza
+	email = rizwanreza@gmail.com 
+[alias]
+	co = checkout
+  cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
+
+  # Log display from screencast, with train tracks.
+  l = log --graph --pretty=format':%C(yellow)%h%Cblue%d%Creset %s %C(white) %an, %ar%Creset'
+
+  # Alternate log display from Scott Chacon
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+
+  # Other useful aliases:
+  unstage = reset HEAD
+  staged = diff --cached
+  unstaged = diff
+  current-branch = !git symbolic-ref -q HEAD | sed -e 's|^refs/heads/||'
+
+  # Usage: git track origin/feature-123-login-form
+  track = checkout -t
+  
+  d = diff
+  ci = commit -v
+  aa = add --all
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+
+[color "diff"]
+  meta = yellow 
+
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim --noplugin
+
+[apply]
+	whitespace = warn
+
+[help]
+	autocorrect = 1
+
+[branch]
+	autosetupmerge = true
+  autosetuprebase = always
+
+[push]
+	default = current
+
+[rerere]
+	enabled = 1
+
+[github]
+	user = rizwanreza
+
+[merge]
+  ff = only

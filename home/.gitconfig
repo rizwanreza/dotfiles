@@ -24,6 +24,9 @@
   ci = commit -v
   aa = add --all
 
+  prom = pull --rebase origin master
+  pom = push origin master
+
 [color]
 	diff = auto
 	status = auto

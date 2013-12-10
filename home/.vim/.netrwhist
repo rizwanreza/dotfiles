@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/rizwanreza/code/monaqasat/app/assets/javascripts/monaqasat'
-let g:netrw_dirhist_2='/Users/rizwanreza/code/monaqasat/app/models'
+let g:netrw_dirhist_2='/Users/rizwanreza/code/monaqasat/spec/assets'
+let g:netrw_dirhist_3='/Users/rizwanreza/code/monaqasat/app/views/bid_items'

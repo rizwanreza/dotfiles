@@ -30,7 +30,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gem brew bundler cap rails3 ruby rvm textmate thor pow powder osx heroku github)
+plugins=(git gem brew bundler cap rails3 ruby textmate thor rvm pow powder osx heroku github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -40,7 +40,6 @@ export CPPFLAGS=-I/opt/X11/include
 
 # export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=/Users/rizwanreza/bin:/Users/rizwanreza/.bin:/usr/local/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/local/mysql/bin:/usr/local/git/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin:$PATH
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE}; "
@@ -62,11 +61,11 @@ alias gi='gem install'
 alias r='rails'
 alias mrails='mate app config db doc features lib public spec test vendor/plugins Gemfile'
 
-alias generate_tags='ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=autotest --exclude=db -f .tags * ~/.rvm/gems/`rvm current`'
+alias generate_tags='ctags -R --exclude=.git --exclude=log --exclude=tmp --exclude=autotest --exclude=db -f .tags *'
 
 # alias vim='mvim -v'
 # alias v='mvim -v'
-alias mon='cd ~/code/monaqasat'
+alias mon='cd ~/code/monaqasat && rvm use ruby-1.9.3-p448-railsexpress@monaqasat'
 alias mic='cd ~/code/microment'
 
 # Prompt modifications
@@ -86,10 +85,7 @@ PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE}; "
 export CC=/usr/bin/gcc
 
-# keep this line at the end
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

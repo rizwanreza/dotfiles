@@ -79,3 +79,9 @@
 [submodule "vim-zoomwin"]
       path = home/.vim/bundle/vim-zoomwin
       url = https://github.com/rphillips/vim-zoomwin.git
+[submodule "home/.vim/bundle/vim-jsx"]
+	path = home/.vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "home/.vim/bundle/vim-javascript"]
+	path = home/.vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git

@@ -2,6 +2,8 @@
 	name = Rizwan Reza
 	email = rizwanreza@gmail.com 
 [alias]
+  st = status -sb
+
 	co = checkout
   cleanup = !git remote prune origin && git gc && git clean -df && git stash clear
 
@@ -26,6 +28,7 @@
 
   prom = pull --rebase origin master
   pom = push origin master
+  pom = push origin head
 
 [color]
 	diff = auto

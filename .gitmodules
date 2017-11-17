@@ -37,9 +37,6 @@
 [submodule "vim-haml"]
       path = home/.vim/bundle/vim-haml
       url = https://github.com/tpope/vim-haml.git
-[submodule "vim-powerline"]
-      path = home/.vim/bundle/vim-powerline
-      url = https://github.com/Lokaltog/vim-powerline.git
 [submodule "vim-rails"]
       path = home/.vim/bundle/vim-rails
       url = git://github.com/tpope/vim-rails.git

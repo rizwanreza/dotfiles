@@ -10,7 +10,8 @@ set smartcase
 set scrolloff=3
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
-set t_ti= t_te=
+set t_ti=
+set t_te=
 
 set iskeyword+=- " words with dashes count as single words for autocompletion
 set iskeyword+=? " words with dashes count as single words for autocompletion
@@ -29,12 +30,12 @@ map Q qq
 
 syntax on
 set hlsearch
-set guifont=Inconsolata:h14
-set guioptions-=T
-set guioptions-=L
-set guioptions-=L
-set guioptions-=r
-set guioptions-=R
+" set guifont=Inconsolata:h14
+" set guioptions-=T
+" set guioptions-=L
+" set guioptions-=L
+" set guioptions-=r
+" set guioptions-=R
 
 
 augroup vimrcEx
@@ -90,6 +91,7 @@ function! InsertTabWrapper()
         return "\<c-p>"
     endif
 endfunction
+
 inoremap <tab> <c-r>=InsertTabWrapper()<cr>
 inoremap <s-tab> <c-n>
 
@@ -247,9 +249,6 @@ au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc
 " Poweline customizations
 let g:html_indent_tags = 'p\|li\|nav'
 
-" map <leader>r :w\|:!ruby %<cr>
-call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
-
 "load ftplugins and indent files
 filetype plugin on
 filetype indent on
@@ -274,3 +273,17 @@ endif
 
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+" Execute ruby with Shift+R
+map <S-r> :w !ruby<CR> 
+
+nmap <F8> :TagbarToggle<CR>
+
+" Force save files that require root permission
+cmap w!! %!sudo tee > /dev/null %
+
+" disable folds by default
+set nofoldenable
+
+" call Pl#Theme#InsertSegment('ws_marker', 'after', 'lineinfo')
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)

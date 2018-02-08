@@ -76,8 +76,7 @@ set incsearch
 set hls
 
 " :set t_Co=256 " 256 colors
-:color solarized
-set background=light
+colorscheme Tomorrow-Night
 
 let mapleader=","
 :set statusline=%<%f\ (%{&ft})\ %-4(%m%)%=%-19(%3l,%02c%03V%)
@@ -146,7 +145,7 @@ let g:ctrlp_max_height = 20
 " let g:ctrlp_dotfiles = 0
 
 let g:ctrlp_custom_ignore = {
-    \ 'dir':  'log$\|tmp$\|\.sass-cache$\|\.git$\|\.hg$\|\.svn$\|vendor$',
+    \ 'dir':  'log$\|tmp$\|\.sass-cache$\|node_modules$\|\.git$\|\.hg$\|\.svn$\|vendor$',
     \ 'file': '\.DS_STORE$\|tags',
     \ 'link': '',
     \ }
@@ -237,7 +236,7 @@ map <C-p> :cp<CR>
 
 vmap <Leader>b :<C-U>!git blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
 
-let g:ctrlp_map = '<Leader>f'
+map <Leader>f <C-p>
 
 au BufRead,BufNewFile {Capfile,Gemfile,Rakefile,Thorfile,config.ru,.caprc,.irbrc,irb_tempfile*} set ft=ruby
 

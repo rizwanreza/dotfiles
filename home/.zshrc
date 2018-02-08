@@ -88,7 +88,11 @@ export CC=/usr/bin/gcc
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export GOPATH="${HOME}/go"
+export GOBIN="${GOPATH}/bin"
+export PATH=$GOBIN:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 

@@ -28,7 +28,7 @@
 
   prom = pull --rebase origin master
   pom = push origin master
-  pom = push origin head
+  poh = push origin head
 
 [color]
 	diff = auto

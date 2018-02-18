@@ -94,7 +94,8 @@ export GOBIN="${GOPATH}/bin"
 export PATH=$GOBIN:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-source ~/.iterm2_shell_integration.`basename $SHELL`
+# source ~/.iterm2_shell_integration.`basename $SHELL`
 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*

@@ -1,4 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/Users/rizwanreza/code/jotto/app/views/posts'
-let g:netrw_dirhist_2='/Users/rizwanreza/code/jotto/app/models'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/app/controllers/users'
+let g:netrw_dirhist_2='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/config/environments'
+let g:netrw_dirhist_3='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/config'
+let g:netrw_dirhist_4='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/app/controllers'
+let g:netrw_dirhist_5='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/app'
+let g:netrw_dirhist_6='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/app/controllers'
+let g:netrw_dirhist_7='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/app'
+let g:netrw_dirhist_8='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/app/models'
+let g:netrw_dirhist_9='/Users/rizwanreza/Library/Mobile Documents/com~apple~CloudDocs/code/jotto/config'

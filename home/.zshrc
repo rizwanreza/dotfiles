@@ -99,3 +99,7 @@ export PATH=$GOBIN:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 # source ~/.iterm2_shell_integration.`basename $SHELL`
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
+  . ~/.config/exercism/exercism_completion.zsh
+fi

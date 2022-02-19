@@ -94,3 +94,6 @@
 [submodule "home/.vim/bundle/vim-test"]
 	path = home/.vim/bundle/vim-test
 	url = https://github.com/vim-test/vim-test
+[submodule "home/.vim/bundle/fzf.vim"]
+	path = home/.vim/bundle/fzf.vim
+	url = git@github.com:junegunn/fzf.vim.git

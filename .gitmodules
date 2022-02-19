@@ -91,3 +91,6 @@
 [submodule "home/.vim/bundle/vim-go"]
 	path = home/.vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
+[submodule "home/.vim/bundle/vim-test"]
+	path = home/.vim/bundle/vim-test
+	url = https://github.com/vim-test/vim-test

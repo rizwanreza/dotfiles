@@ -1,12 +1,6 @@
 [submodule "ctrlp.vim"]
       path = home/.vim/bundle/ctrlp.vim
-      url = https://github.com/kien/ctrlp.vim.git
-[submodule "dash.vim"]
-      path = home/.vim/bundle/dash.vim
-      url = https://github.com/rizzatti/dash.vim.git
-[submodule "funcoo.vim"]
-      path = home/.vim/bundle/funcoo.vim
-      url = https://github.com/rizzatti/funcoo.vim.git
+      url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "tabular"]
       path = home/.vim/bundle/tabular
       url = https://github.com/godlygeek/tabular.git

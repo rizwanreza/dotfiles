@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh configuration.
+# Path to your ghh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 # export TERM="xterm-256color"
 
@@ -30,7 +30,7 @@ COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git gem brew bundler cap rails ruby textmate thor rvm pow powder osx heroku github)
+plugins=(git gem brew bundler rails ruby sudo thor rbenv pow powder heroku github)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -79,7 +79,7 @@ local smiley="%(?,%{$fg[green]%}:)%{$reset_color%},%{$fg[red]%}:(%{$reset_color%
 PROMPT='
 %~
 ${smiley}  %{$reset_color%}'
-RPROMPT='$(~/.bin/git-cwd-info.rb)%{$fg[yellow]%} $(~/.rvm/bin/rvm-prompt)%{$reset_color%}'
+RPROMPT='$(~/.bin/git-cwd-info.rb)%{$fg[yellow]%} %{$reset_color%})'
 
 PROMPT_TITLE='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}\007"'
 export PROMPT_COMMAND="${PROMPT_COMMAND} ${PROMPT_TITLE}; "
@@ -91,15 +91,18 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 export GOPATH="${HOME}/go"
 export GOBIN="${GOPATH}/bin"
-export PATH=$GOBIN:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export PATH=$GOBIN:$PATH 
 
 
 # test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 # source ~/.iterm2_shell_integration.`basename $SHELL`
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-
 if [ -f ~/.config/exercism/exercism_completion.zsh ]; then
   . ~/.config/exercism/exercism_completion.zsh
 fi
+
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+eval "$(rbenv init - zsh)"
+

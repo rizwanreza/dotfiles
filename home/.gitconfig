@@ -63,3 +63,5 @@
 
 [merge]
   ff = only
+[url "https://"]
+	insteadOf = git://
